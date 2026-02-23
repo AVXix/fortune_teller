@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortune Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container that holds the fortune box and color controls side by side -->
+    <div class="container">
+        <!-- Fortune display box that shows a random fortune on page load -->
+        <div class="fortunebox" id="fortuneBox">
+            
+        </div>
+
+        <!-- Preset controls section on the right side -->
+        <div class="controls">
+            <div class="controls-title">Style Presets</div>
+            <div class="preset-grid">
+                <button class="preset-box" id="preset1" type="button">
+                    <span class="preset-name">blue-white-blue</span>
+                    <span class="preset-meta">20px - Trebuchet</span>
+                </button>
+                <button class="preset-box" id="preset2" type="button">
+                    <span class="preset-name">white-blue-yellow</span>
+                    <span class="preset-meta">24px - Georgia</span>
+                </button>
+                <button class="preset-box" id="preset3" type="button">
+                    <span class="preset-name">gray-lightgreen-green</span>
+                    <span class="preset-meta">18px - Verdana</span>
+                </button>
+                <button class="preset-box" id="preset4" type="button">
+                    <span class="preset-name">brown-beige-red</span>
+                    <span class="preset-meta">28px - Times</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* --------- GLOBAL & PAGE LAYOUT --------- */
+
+/* 
+ * Body: Foundation for the application layout
+ * - Removes browser default margins
+ * - Fills entire viewport (100vh)
+ * - Uses flexbox to center all content both horizontally and vertically
+
+ */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;   /* Horizontally center content */
+    align-items: center;       /* Vertically center content */
+    background-color: #220022;   /* Deep purple background for mystical vibe */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* --------- CONTAINER LAYOUT --------- */
+
+/* 
+ * Main container: Organizes fortune box and control panel side-by-side
+ * - Flexbox row layout ensures horizontal arrangement
+ * - 50px gap provides visual separation between fortune box and controls
+ * - Vertically aligns items to same baseline
+ */
+.container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* --------- FORTUNE BOX --------- */
+
+/* 
+ * Fortune box: Displays random fortune to the user
+ * - Max width of 800px prevents excessive line lengths
+ * - Padding provides internal spacing around text
+ * - Flexbox centering ensures text is centered in the box
+ * - Smooth transform transition (0.3s) for interactive feedback
+ * - Yellow-green border (olive) provides visual prominence
+ * - Cursor pointer indicates clickability
+ */
+.fortunebox {
+    max-width: 800px;
+    padding: 30px 40px;
+    background-color: #424643;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: 10px solid rgb(109, 109, 22);
+}
+
+/* --------- CONTROL PANEL STYLES --------- */
+
+/* 
+ * Controls wrapper: Vertical stack of all color and font controls
+ * - Column layout arranges controls vertically
+ * - 15px gap provides spacing between control groups
+ */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 280px;
+}
+
+.controls-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* 
+ * Control item: Individual control group (label + input)
+ * - Vertical layout stacks label above input
+ * - 5px gap provides tight spacing between label and control
+ */
+.control-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 
+ * Control item labels: Identifies each color control function
+ * - Small, bold text (12px, font-weight: bold) for emphasis
+ * - White text ensures visibility against dark background
+ */
+.control-item label {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 
+ * Color picker input: Allows user to select colors
+ * - Fixed size (80px × 50px) for consistent appearance
+ * - Pointer cursor indicates interactivity
+ */
+.control-item input[type="color"] {
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* 
+ * Preset boxes: Apply complete styling with one click
+ * - Each box represents a complete theme with multiple attributes
+ * - 120px square size with centered text
+ * - Pointer cursor indicates clickability
+ */
+.preset-box {
+    width: 100%;
+    min-height: 110px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 10px;
+    gap: 6px;
+    background: transparent;
+    appearance: none;
+}
+
+.preset-name {
+    font-size: 13px;
+}
+
+.preset-meta {
+    font-size: 11px;
+    color: #ffffff;
+}
+
+/* Preset Box 1: Classic (Blue/White/Arial/20px) */
+#preset1 {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+}
+
+/* Preset Box 2: Dark (Black/Yellow/Georgia/24px) */
+#preset2 {
+    background-color: #2c3e50;
+}
+
+/* Preset Box 3: Bright (Lime/Purple/Verdana/18px) */
+#preset3 {
+    background-color: #3f7d3f;
+}
+
+/* Preset Box 4: Elegant (Red/Gold/Times New Roman/28px) */
+#preset4 {
+    background-color: #8b0000;
+}
+
